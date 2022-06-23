@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Git Tutorial</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel='icon' href='assets/git.png' type='image/x-icon'/ >
+  </head>
+  <body>
+
+    <div class="grid">
+      <div class="sideBars">
+      <img class="sideImage" src="assets/git.png" alt="">
+    </div>
+      <div class="mainContent">
+        <div class="gridNav">
+          <div class="button" >
+            <a href="#git"><h3>Git</h3></a>
+          </div>
+          <div class="button">
+            <a href="#npm"><h3>NPM</h3></a>
+          </div>
+          <div class="button">
+            <a href="#webpack"><h3>Webpack</h3></a>
+          </div>
+          <div class="button" >
+            <a href="#css"><h3>CSS</h3></a>
+          </div>
+          <div class="button">
+            <a href="#bem"><h3>BEM</h3></a>
+          </div>
+          <div class="button">
+            <a href="#dev"><h3>DevServer</h3></a>
+          </div>
+          <div class="button">
+            <a href="#mobile"><h3>Mobile first</h3></a>
+          </div>
+
+        </div>
+        <div class="headSection" id="git">
+          <h1>Git and Github Tutorial</h1>
+          <a href="resumo.html"><h3 >Resumo</h3></a>
+
+          <p><a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf" target="_blank">Cheat Sheet</a></p>
+        </div>
+        <div class="">
+          <h3>Commun workflow using github</h3>
+        </div>
+
+        <h3>Commun commands:</h3>
+        <p class="smallText">"stolen" from <a target="_blank" href="https://dzone.com/articles/top-20-git-commands-with-examples">here</a> </p>
+        <p>On the commandline, navigate to the project folder...</p>
+        <ul>
+            <li>git --version <br> <span class="fileName">Find out if Git is installed on the computer by asking for the installed version.</span> </li>
+          <li>git init <br> <span class="fileName">Creates a Repository on that folder</span> </li>
+          <li>git status <br> <span class="fileName">Shows inf about the status of the commit</span> </li>
+          <li>git add Board.pde <br>  <span class="fileName">Adds the file Board.pde to the Staging Area</span> </li>
+          <li>git add -A <br>  <span class="fileName">Adds all the files in current folder to the Staging Area</span> </li>
+          <li>git commit -m 'First commit of Checkers game.' <br> <span class="fileName">Finalizes the commit with a message</span> </li>
+          <li>git config</li>
+          <li>git clone</li>
+          <li>git diff <br> <span class="fileName">This command shows the file differences which are not yet staged.</span> </li>
+          <li>git diff –staged<br> <span class="fileName">This command shows the differences between the files in the staging area and the latest version present.</span> </li>
+          <li>git diff [first branch] [second branch]<br> <span class="fileName">This command shows the differences between the two branches mentioned.</span> </li>
+
+          <li>git reset [file]<br> <span class="fileName">This command unstages the file, but it preserves the file contents.</span> </li>
+          <li>git reset --hard [version hash]<br> <span class="fileName">Go back to the version identified by the hash value.</span> </li>
+          <li>git rm</li>
+          <li>git log<br> <span class="fileName">This command is used to list the version history for the current branch.</span> </li>
+          <!-- <br> <span class="fileName"></span> -->
+          <li>git show</li>
+          <li>git tag [commitID]<br> <span class="fileName">This command is used to give tags to the specified commit.</span></li>
+          <li>git branch<br> <span class="fileName">This command lists all the local branches in the current repository.</span></li>
+          <li>git branch [branch name] <br> <span class="fileName">This command creates a new branch.</span></li>
+          <li>git checkout [branch name]<br> <span class="fileName">This command is used to switch from one branch to another.</span></li>
+          <li>git checkout -b [branch name]<br> <span class="fileName">This command is used to createa new branch.</span></li>
+          <li>git merge</li>
+          <li>git remote</li>
+          <li>git push <br><span class="fileName">The git push command is used to upload local repository content to a remote repository.</span> </li>
+          <li>git pull</li>
+          <li>git stash</li>
+        </ul>
+      </div>
+      <div class="sideBars"></div>
+    </div>
+
+
+
+              <!-- NPM -->
+
+
+
+    <div class="grid" id="npm">
+      <div class="sideBars">
+      <img src="assets/npm.png" class="sideImage" alt="">
+    </div>
+      <div class="mainContent">
+        <div class="headSection">
+          <div class="separator"></div>
+          <h1>NPM</h1>
+          <p>Introduction text to NPM...</p>
+          <h2>Installing Dependencies on a site using NPM</h2>
+        </div>
+
+        <div class="grid2">
+          <!-- row -->
+          <div class="">
+          <p>On the command line, navigate to the project folder and enter this line:</p>
+          </div>
+
+          <div class="">
+            <p class="commandline paddingLeft"> <br> npm init -y</p>
+            <p class="smallText">The -y flag when passed to NPM commands tells the generator to use the defaults instead of asking questions.
+<br>
+  Will simply generate an empty npm project without going through an interactive process.
+<br>
+  The -y stands for yes</p>
+          </div>
+
+          <!-- row -->
+          <div class="">
+            <p>A json file is created called <span class="fileName">package.json</span> that keeps track of all the packages that our projects uses.</p>
+            <p>What is package JSON? <br>
+              Packages published to the registry must contain a package.json file. A package.json file: lists the packages your project depends on. specifies versions of a package that your project can use using semantic versioning rules. makes your build reproducible, and therefore easier to share with other developers.</p>
+          </div>
+
+          <pre>
+      {
+        "name": "travel-site",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/carbonne56/travel-site.git"
+        },
+        "keywords": [],
+
+        "author": "",
+        "license": "ISC",
+        "bugs": {
+          "url": "https://github.com/carbonne56/travel-site/issues"
+        },
+        "homepage": "https://github.com/carbonne56/travel-site#readme"
+      }
+          </pre>
+          <!-- row -->
+            <p>Now we can install packages using npm and they will automatically be added to this json file.</p>
+            <div class="">
+              <p class="commandline paddingLeft install"> npm install lodash</p>
+              <p class="commandline paddingLeft install"> npm install normalize.css</p>
+            </div>
+            <!-- row -->
+            <p>now this new section will automaticaly be added to the package.json file </p>
+            <p class="commandline paddingLeft">
+              "dependencies": {                 <br>
+                "lodash": "^4.17.15",           <br>
+                "normalize.css": "^8.0.1"       <br>
+              }
+            </p>
+
+            <!-- row -->
+            <p>In case the dependencies folder is deleted, all we have to do is enter in the command line </p>
+              <p class="commandline paddingLeft install"> <br> npm install</p>
+        </div>
+        <p>and the folder will be restaured with all the dependencies listed in the json file.</p>
+      </div>
+
+      <div class="sideBars"></div>
+    </div>
+
+              <!-- WEBPACK -->
+
+
+
+
+    <div class="grid">
+      <div class="sideBars">
+<img class="sideImage" src="assets/webpack.png" alt="">
+      </div>
+      <div class="mainContent"  id="webpack">
+        <div class="headSection">
+          <div class="separator"></div>
+          <h1>WebPack</h1>
+<p class="commandline paddingLeft install">npm install webpack webpack-cli --save-dev <br> </p>
+<p class="paddingLeft alignLeft"><b>What problem does Webpack solve?</b> <br>Webpack solves a problem that only exists if your project has a certain size and uses certain technologies: SASS, Javascript ES2015, JSX, Typescript… The bigger, longer and more advanced the project, the more valuable it is. For small projects, Webpack can be an overkill.</p>
+<p class="paddingLeft alignLeft"><b>What is Webpack and how it works?</b> <br> Webpack is a command line tool to create bundles of assets (code and files). Webpack doesn't run on the server or the browser. Webpack takes all your javascript files and any other assets and transforms then into one huge file. This big file can then be sent by the server to a client's browser.</p>
+        </div>
+        <h3>Steps to install WebPack</h3>
+        <div class="grid2">
+
+          <!-- row -->
+          <p>1- Then on the project's root directory create a new file called <br> <span class="fileName">webpack.config.js</span> <br><br>
+            Webpack looks for a file in the project with this exact name. On the file we write what we want it to do: </p>
+            <p class="commandline paddingLeft">
+              <br><br><br><br><br><br>
+            module.exports = {<br>
+            entry: './app/assets/scripts/App.js'<br>
+            }
+          </p>
+          <!-- row -->
+          <div class="">
+            <p>2- On the <span class="">package.json</span> file inside the scripts, add the line in blue<br><br></p>
+            <p>This step is so we won't have to install WebPack globally on our computer. <br><br></p>
+          </div>
+          <p class="commandline paddingLeft">
+            (...) <br>
+            "scripts": { <br>
+            <span class="fileName">"dev": "webpack",</span><br>
+            "test": "echo \"Error: no test specified\" && exit 1"<br>
+            },<br>
+            (...)<br>
+
+          </p>
+          <!-- row -->
+          <p>3- If we want to define the location and name of the webpack <span class="fileName">output</span> file we can go to the <span>webpack.config.js</span> file and
+            add the following object: <br><br></p>
+          <p class="commandline paddingLeft">
+            const path = require('path'); <span class="">// We use this import to generate an absolute path to the required folder across all operating systems</span> <br><br>
+
+            module.exports = {                        <br>
+            <span ></span>  entry: './app/assets/scripts/App.js',   <br>
+            <span class="fileName">  output: {                               <br>
+                filename: 'bundled.js',               <br>
+                path: path.resolve(__dirname, 'app')  <br>
+              }</span><br>
+            }
+
+          </p>
+
+          <!-- row -->
+          <p>4-  Also, after setting the output, we can set the <a href="https://webpack.js.org/configuration/mode/" target="_blank"><span class="fileName">mode</span> </a></p>
+          <p class="commandline paddingLeft">
+
+            const path = require('path')                  <br><br>
+
+            module.exports = {                                  <br>
+              entry: './app/assets/scripts/App.js',             <br>
+              output: {                                         <br>
+                filename: 'bundled.js',                         <br>
+                path: path.resolve(__dirname, 'app')            <br>
+              },                                                <br>
+            <span class="fileName">mode: 'development'</span>   <br>
+            }                                                   <br>
+
+          </p>
+          <!-- row -->
+          <p>5- On the bottom of the <span class="fileName">index.html</span> file, right above the closing body tag, add a script tag with the appropriate src</p>
+          <p class="commandline paddingLeft"> &lt;script src= "bundled.js"&gt;&lt;/script&gt;</p>
+
+          <!-- row -->
+          <p>6- Run the webpack script by typing in the command line</p>
+          <p class="commandline paddingLeft">npm run dev</p>
+
+          <!-- row -->
+          <p>7- There is still one final task to attend, we need to change the config file once more,
+            in order to generate some sort of automation, so that every time we change the index.html file,  we don't have to type "npm run dev"</p>
+
+          <p class="commandline paddingLeft">
+            const path = require('path') <br><br>
+
+            module.exports = {<br>
+              entry: './app/assets/scripts/App.js',<br>
+              output: {<br>
+                filename: 'bundled.js',<br>
+                path: path.resolve(__dirname, 'app')<br>
+              },<br>
+              mode: 'development',<br>
+              <span class="fileName">watch: true</span> <br>
+            }<br>
+          </p>
+          <!-- row -->
+          <p>Now, if we run webpack (npm run dev), webpack will stay running, watching for changes and updating the site automatically when we refresh it. To make it stop running, we must press CTRL+C on the commend line.</p>
+        </div>
+      </div>
+      <div class="sideBars"></div>
+    </div>
+
+
+
+    <!-- Managing CSS with webpack -->
+
+
+
+    <div class="grid" id="css">
+      <div class="sideBars">
+        <img class="sideImage" src="assets/css.png" alt="">
+
+      </div>
+      <div class="mainContent"  id="webpack">
+        <div class="headSection">
+          <div class="separator"></div>
+          <h1>CSS with WebPack</h1>
+        </div>
+        <div class="grid2">
+          <!-- row -->
+          <p>1- In the assets folder create a new folder <span class="fileName">styles</span> and inside it create a new file called <span class="fileName">styles.css</span>. <br>
+          In the <span class="fileName">App.js</span> file inside the scripts folder, add the line: </p>
+          <p class="commandline paddingLeft"> <br><br><br><br> import "../styles/styles.css"</p>
+          <!-- row -->
+          <p>2- In the commandline enter:</p>
+          <p class="commandline paddingLeft install"> npm install css-loader style-loader --save-dev</p>
+          <!-- row -->
+          <p>3- In the <span class="fileName">webpack.config.js</span> file add the following:  <br><br><br><br><br>
+          The postCSSPlugins is a variable that lists all the plugins to use.</p>
+          <pre class="commandline">
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ['style-loader',
+              'css-loader',
+               {
+                 loader: 'postcss-loader',
+                options: {plugins: postCSSPlugins}
+              }
+            ]
+          }
+        ]
+      }
+          </pre>
+          <!-- row -->
+          <p>4- Install another package:</p>
+          <p class="commandline paddingLeft install">npm install post-css-loader --save-dev</p>
+          <!-- row -->
+
+          <p>5- On the top of the same file create an array with all the imports: <br><br><br>
+            <!-- Now would be a good time to run <span class="commandline"> npm run dev</span>on the command line to see if all the  -->
+          </p>
+          <pre class="commandline">
+    const postCSSPlugins = [
+      require('postcss-simple-vars'),
+      require('postcss-nested'),
+      require('autoprefixer')
+    ]
+          </pre>
+          <!-- row -->
+          <p>Also install the required dependencies: </p>
+          <p class="commandline paddingLeft install">npm install postcss-simple-vars postcss-nested autoprefixer --save-dev</p>
+
+
+          <!-- row -->
+          <div class="">
+            <h3>6- Postcss import </h3>
+            <p>This plugin can consume local files, node modules or web_modules.
+              To resolve path of an @import rule, it can look into root directory (by default process.cwd()),
+              web_modules, node_modules or local modules. When importing a module,
+              it will look for index.css or file referenced in package.json in the style or main fields.
+              You can also provide manually multiples paths where to look at.</p>
+              <p>Notes: <br>
+              - This plugin should probably be used as the first plugin of your list. This way, other plugins will work on the AST as if there were only a single file to process, and will probably work as you can expect. <br>
+              - More on this <a href="https://github.com/postcss/postcss-import">here</a> </p>
+          </div>
+          <div class="">
+            <p class="paddingLeft">Command-line: <br>
+            <span class="commandline install">npm install postcss-import --save -dev</span> <br><br><br>
+            <span class="">// inside webpack.config.js</span> </p>
+            <pre class="commandline">
+      const postCSSPlugins = [
+        require('postcss-import'),
+        require('postcss-simple-vars'),
+        require('postcss-nested'),
+        require('autoprefixer')
+      ]
+
+            </pre>
+          </div>
+
+          <!-- row -->
+
+          <p>7- One last thing, <br>
+          If we don't want webpack to handle the images, in the config file, replace <span class="commandline">'css-loader'</span> with -> </p>
+
+          <p class=" commandline"> <br><br> 'css-loader?url=false' </p>
+
+
+
+        </div>
+
+      </div>
+      <div class="sideBars"></div>
+    </div>
+
+
+<!--  CSS Architecture -->
+
+
+    <div class="grid">
+      <div class="sideBars"><img src="assets/bem.jpg" class="sideImage" alt=""></div>
+      <div class="mainContent"  id="bem">
+        <div class="headSection">
+          <div class="separator"></div>
+          <h1>CSS Architecture</h1>
+          <p>BEM is a naming styling that is created by Yandex (think of them as Russia's Google). The problem BEM is trying to solve is the naming problem and structure that CSS often run into. BEM also provides a better structure for your CSS code and scalable CSS.</p>
+        </div>
+        <div class="grid3">
+          <div class="bem">
+            <h1><span style="color: #ff2222; font-size: 38px;">B</span>lock</h1>
+            <p style="text-align: left;">Standalone entity that is meaningful on its own.</p>
+            <p style="text-align: left;"> <br>Examples: <br>
+            header, container, menu, checkbox, input. </p>
+          </div>
+          <div class="bem">
+            <h1><span style="color: #22aaff; font-size: 38px;">E</span>lement</h1>
+            <p style="text-align: left;">A part of a block that has no standalone meaning and is semantically tied to its block.</p>
+            <p style="text-align: left;"> Examples: <br>
+            menu item, list item, checkbox caption, header title. </p>
+
+          </div>
+          <div class="bem">
+            <h1><span style="color: #ccbb22; font-size: 38px;">M</span>odifier</h1>
+            <p style="text-align: left;">A flag on a block or element. Use them to change appearance or behavior.</p>
+            <p style="text-align: left;"> <br>Examples: <br>
+            disabled, highlighted, checked, fixed, size big, color yellow.</p>
+          </div>
+        </div>
+        <h2>Benefits</h2>
+        <div class="grid3">
+          <div class="bem">
+            <h3>Modularity</h3>
+            <p style="text-align: left;max-width:90%;">Block styles are never dependent on other elements on a page, so you will never experience problems from cascading.</p>
+            <p style="text-align: left;max-width:90%;">You also get the ability to transfer blocks from your finished projects to new ones.</p>
+          </div>
+          <div class="bem">
+            <h3>Reusability</h3>
+            <p style="text-align: left; max-width:90%;">Composing independent blocks in different ways, and reusing them intelligently, reduces the amount of CSS code that you will have to maintain.</p>
+            <p style="text-align: left;max-width:90%;">With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective.</p>
+          </div>
+          <div class="bem">
+            <h3>Structure</h3>
+            <p style="text-align: left;">BEM methodology gives your CSS code a solid structure that remains simple and easy to understand.</p>
+          </div>
+        </div>
+        <h2>Usage with Postcss</h2>
+        <div class="grid3">
+          <div class="bem">
+            <h3>CSS variables</h3>
+            <p style="text-align:left;">With css variables we can have a css variable to hold a value we can reuse troughout the file.</p>
+            <p class="commandline alignLeft paddingLeft">$myBlue: #23add7; <br>
+            .button { <br>
+            &emsp;&emsp;color: $myBlue; <br> } </p>
+          </div>
+
+          <div class="bem">
+
+            <h3>Nested CSS</h3>
+  <pre class="commandline alignLeft">
+ .large-hero {
+ position: relative;
+
+   &__text-content {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 0;
+   width: 100%;
+   text-align: center;
+  }
+ }</pre>
+
+          </div>
+
+          <div class="bem">
+            <h3>Autoprefixer</h3>
+            <p class="paddingLeft" style="text-align: left;">
+              It's a CSS post processor.
+                 It combs through compiled CSS files to add or remove vendor prefixes like -webkit and -moz after
+                 checking the code against caniuse.com.
+            </p>
+
+              <p class="paddingLeft" style="text-align: justify;"></p>
+          </div>
+
+        </div>
+      </div>
+      <div class="sideBars"></div>
+    </div>
+
+
+
+    <!-- Webpack Dev Server -->
+
+
+
+    <div class="grid">
+      <div class="sideBars"></div>
+      <div class="mainContent"  id="dev">
+        <div class="headSection">
+          <div class="separator"></div>
+          <h1>Webpack Dev Server</h1>
+          <p class="commandline install">npm install webpack-dev-server</p>
+          <div class="separator"></div>
+        </div>
+        <div class="grid2">
+          <h3>1- <span class="fileName">webpack.config.js</span></h3>
+
+          <pre class="commandline">
+module.exports = {
+  entry: (...),
+  output: {
+    (...)
+  },
+  derServer: {
+    contentBase: path.join(__dirname, 'app'),
+    hot: true,
+    port: 3000
+  },
+  mode:(...),
+  watch: true, <span class="fileName">// <- delete this line</span>
+  }
+}
+          </pre>
+
+          <!-- row -->
+
+          <h3>2- <span class="fileName">package.json</span>  </h3>
+          <pre class="commandline">
+(...)
+"scripts": {
+  "dev": "webpack-dev-server" <span class="fileName">// <- change to this</span>
+}
+          </pre>
+
+
+                    <!-- row -->
+
+        <h3>3- <span class="fileName">App.js</span></h3>
+        <pre>
+<span class="fileName">//  add this</span>
+if (module.hot){
+  module.hot.accept()
+}
+        </pre>
+        </div>
+        <p>Now, on the brouser we can add this address and when we save changes in a css file, webpack will automatically inject the new CSS without reloading the page.</p>
+        <img src="assets/brouserAddress.png" style="width: 50%; margin-left: 25%;" alt="">
+
+        <div class="separator"></div>
+
+        <div class="grid2">
+
+
+          <h2>Refresh html automatically</h2>
+
+            <p>In order to refresh the html file in the brouser automatically, onsave, we have to take the following step</p>
+
+            <!-- row -->
+
+            <h3>4- <span class="fileName">webpack.config.js</span></h3>
+          <pre class="commandline">
+          (...)
+          devServer: {
+            before: function(app, server){
+              server._watch('./aapp/**/*.html')
+            }
+          }
+          </pre>
+
+          <h2>Open the site on any device</h2>
+
+            <p>With the following step, we will be able to open the site on any device connected to the same Wi-fi/Network connection</p>
+
+            <!-- row -->
+
+            <h3>4- <span class="fileName">webpack.config.js</span></h3>
+          <pre class="commandline">
+          after(...)
+          port:3000,
+          host: '0.0.0.0'  <span class="fileName">// add this line</span>
+          </pre>
+
+
+                      <!-- row -->
+
+        <div class="">
+          <p>Find the name of the <span class="fileName">local IP address</span> in System Preferences > Network (Rede) </p>
+          <img style="width: 100%;" src="assets/system2.png" alt="">
+        </div>
+
+        <div class="">
+          <p> <br><br> </p>
+          <img style="width: 80%; margin-left: 10%;" src="assets/network.png" alt="">
+        </div>
+
+        </div>
+        <p class="headSection">On an Ipad or smartphone, on the brouser address, insert: <br>
+        <span class="commandline">192.168.X.XX:3000</span> </p>
+      </div>
+      <div class="sideBars"></div>
+    </div>
+
+
+
+
+      <!-- Mobile first -->
+
+
+
+      <div class="grid">
+        <div class="sideBars"></div>
+        <div class="mainContent"  id="mobile">
+          <div class="headSection">
+            <div class="separator"></div>
+            <h1>Mobile First</h1>
+            <p class="commandline paddingLeft install">npm install postcss-mixins --save-dev <br> </p>
+            <div class="separator"></div>
+            <p class="alignLeft paddingLeft">With the increase of trafic in mobile devices, where most navigation is now made, became more logical to think of web development in terms of mobile first. <br>
+              In this line of thought, the website is designed for smaller screens first and then, with the application of a set of rules, scaled to the larger screens. </p>
+          </div>
+          <div class="grid2">
+
+            <!-- row -->
+
+            <div class="">
+              <h3 class="paddingLeft">Screen Sizes:</h3>
+
+              <table class="paddingLeft">
+                <tr>
+                  <td>XS</td> <td> <span> Extra-Small:</span></td> <td> < 580 pixels </td>
+                </tr>
+                <tr>
+                  <td>S</td> <td> <span> Small:</span></td> <td> &ge; 580 pixels </td>
+                </tr>
+                <tr>
+                  <td>M</td> <td> <span> Extra-Small:</span></td> <td> &ge; 800 pixels </td>
+                </tr>
+                <tr>
+                  <td>L</td> <td> <span> Extra-Small:</span></td> <td> &ge; 1200 pixels </td>
+                </tr>
+              </table>
+            </div>
+            <div class="">
+              <pre class="commandline">
+                <span class="fileName">webpack.config.js</span> <br><br>
+                const postCSSPlugins = {
+                  require('postcss-import'),
+                  require('postcss-mixins') <span class="">// add this line</span>
+                  (...)
+
+                }
+              </pre>
+
+              <div class="">
+                <pre class="commandline">
+                  <span class="fileName">styles.css</span> <br><br>
+                  <span>/* after */ </span> @import "base/variables";
+                  <span>/* add */   </span> @import "base/mixins";
+                </pre>
+              </div>
+            </div>
+
+            <!-- row -->
+
+
+            <p>When using mobile first the commun practice is to set the sizes for mobile and then use media queries to reset the sizes deppending on the size of the screen:</p>
+            <pre class="commandline">
+                @media(min-width: 530px){
+                  font-size: 4.8rem;
+                }
+            </pre>
+
+
+            <!-- row -->
+
+            <p>With mixins, we can create a new css file <span>styles/base/_mixins.css</span> and define the sizes we want to define with a name, like with css variables.</p>
+            <pre class="commandline">
+                @define-mixin atSmall {
+                  @media(min-width:530px){
+                    @mixin-content;
+                  }
+                }
+            </pre>
+
+            <!-- row -->
+
+            <p>Then we can use them like this:</p>
+            <pre class="commandline">
+                font-size: 1rem;
+                @mixin atSmall {
+                  font-size: 2.9rem;
+                }
+            </pre>
+          </div>
+        </div>
+        <div class="sideBars"></div>
+      </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+body {
+  background-color: #333;
+  color: #FFF;
+  font-family: palatino, helvetica;
+}
+header {
+  text-align: center;
+}
+span {
+  color: rgb(130, 200, 80);
+  font-size: 18px;
+}
+li {
+  font-size: 23px;
+}
+a {
+  text-decoration: none;
+  color: #a7e9af;
+}
+p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+td {
+  padding: 0px 10px;
+}
+.smallText {
+  font-size: 15px;
+}
+
+.headSection {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+
+}
+
+.gridNav{
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 15% 15%;
+}
+.button {
+  background-color: #a7e9af;
+
+  width: 120px;
+  text-align: center;
+
+}
+.button h3 {
+  color:#333;
+}
+.sideBars {
+  background-color: #eef9bf;
+}
+.sideImage {
+  width: 100px;
+  padding-left: 30px;
+  padding-top: 100px;
+}
+
+.mainContent {
+  padding: 50px;
+
+}
+
+.commandline {
+  color: #75b79e;
+
+  font-family: Courier;
+}
+.paddingLeft {
+  margin-left: 50px;
+}
+.alignLeft {
+  text-align: left;
+}
+
+.fileName {
+
+  color: rgb(80, 150, 255);
+  font-family: Courier;
+}
+.monoSpace {
+  font-family: Courier;
+}
+
+
+.bem {
+  text-align: center;
+}
+.separator {
+  height: 2px;
+  margin: 20px 0 20px 0;
+  background-color: rgba(255,255,255,.3);
+}
+.install {
+  font-size: 30px;
+  color: #fcd703;
+}
